@@ -1,7 +1,14 @@
+import { useState } from "react";
+
 export default function Songs ({songs, currentlyPlaying}) {
 
-const currentlyPlayingSong = songs[currentlyPlaying].title;
+const [currentlyPlayingSong, setCurrentlyPlaying] = useState(0)
+// const currentlyPlayingSong = songs[currentlyPlaying].title;
+const preview = songs[currentlyPlaying].previewURL;
 
+function handleCurrentlyPlaying () {
+   setCurrentlyPlaying(currentlyPlaying)
+}
 
 
  return   <>
@@ -20,6 +27,8 @@ const currentlyPlayingSong = songs[currentlyPlaying].title;
             </ol>
 
             <p className="song-current">Currently playing : {currentlyPlayingSong}</p>
+
+            <iframe src={preview} title="preview"></iframe>
 
          </>
  

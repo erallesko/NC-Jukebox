@@ -1,6 +1,8 @@
+import Balance from "../components/Balance";
 import Header from "../components/Header"
 import PlayCounts from "../components/PlayCounts";
 import Songs from "../components/Songs";
+
 
 const App = () => {
   const playListTitle = "My cool playlist";
@@ -58,6 +60,8 @@ const App = () => {
       < Songs songs={songs} currentlyPlaying={currentlyPlaying} />
 
       <PlayCounts playCounts={playCounts}/>
+
+      <Balance/>
       
     </div>
   );
